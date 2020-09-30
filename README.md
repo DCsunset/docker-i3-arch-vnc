@@ -33,6 +33,11 @@ it is **insecure** when exposing the container on the Internet.
 * 5900: Used for VNC interface
 * 6080: Used for noVNC Web UI
 
+## Customization
+
+The VNC config can be changed by mounting the config file at
+`/root/.vnc/config`.
+
 ## Installed applications
 
 * tigervnc
