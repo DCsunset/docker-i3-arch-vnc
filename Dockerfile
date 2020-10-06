@@ -29,7 +29,6 @@ RUN	wget https://github.com/novnc/websockify/archive/v${websockify_version}.tar.
 	&& ln -s vnc.html index.html \
 	&& rm /noVNC.tar.gz
 
-COPY ./config/vncconfig /root/.vnc/
 COPY ./start.sh /
 
 WORKDIR /root
