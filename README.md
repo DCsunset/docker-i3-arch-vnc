@@ -25,8 +25,9 @@ Or you can use a different VNC client (like TigerVNC client)
 and connect to localhost:5900.
 
 If `VNC_PASSWD` is not set,
-then the security type of tigervnc is set to None,
+the security type of tigervnc should be set to None in `/root/.vnc/config`,
 it is **insecure** when exposing the container on the Internet.
+
 
 ## Exposed ports
 
@@ -37,6 +38,7 @@ it is **insecure** when exposing the container on the Internet.
 
 The VNC config can be changed by mounting the config file at
 `/root/.vnc/config`.
+By default, the config file is empty.
 
 ## Installed applications
 
