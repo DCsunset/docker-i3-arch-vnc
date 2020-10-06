@@ -1,6 +1,7 @@
 #!/bin/bash
 
 umask 0077                # use safe default permissions
+mkdir -p "$HOME/.vnc"
 chmod go-rwx "$HOME/.vnc" # enforce safe permissions
 
 # Start TigerVNC
