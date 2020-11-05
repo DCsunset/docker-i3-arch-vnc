@@ -21,7 +21,8 @@ docker run -d --name i3-arch-vnc -p 5900:5900 -p 6080:6080 -e VNC_PASSWD=passwor
 ```
 
 On the first startup, this image will install the i3 related packages.
-This approach ensures that the base image is minimum  .
+You may need to wait a few minutes after creating the container.
+This approach ensures that the base image is minimum.
 
 Then visit <http://localhost:6080> to visit noVNC UI.
 Or you can use a different VNC client (like TigerVNC client)
