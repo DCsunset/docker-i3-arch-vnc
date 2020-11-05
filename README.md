@@ -3,7 +3,7 @@
 [![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/dcsunset/i3-arch-vnc)](https://hub.docker.com/r/dcsunset/i3-arch-vnc)
 [![Docker Image Size](https://badgen.net/docker/size/dcsunset/i3-arch-vnc)](https://hub.docker.com/r/dcsunset/i3-arch-vnc)
 
-A docker image of Arch Linux with i3wm and VNC support.
+A minimum docker image of Arch Linux with i3wm and VNC support.
 
 
 ## Pull image
@@ -19,6 +19,9 @@ Simple usage:
 ```
 docker run -d --name i3-arch-vnc -p 5900:5900 -p 6080:6080 -e VNC_PASSWD=password dcsunset/i3-arch-vnc
 ```
+
+On the first startup, this image will install the i3 related packages.
+This approach ensures that the base image is minimum  .
 
 Then visit <http://localhost:6080> to visit noVNC UI.
 Or you can use a different VNC client (like TigerVNC client)
@@ -39,6 +42,8 @@ it is **insecure** when exposing the container on the Internet.
 The VNC config can be changed by mounting the config file at
 `/root/.vnc/config`.
 By default, the config file is empty.
+
+Besides, `init.sh` and `start.sh` can be customized as well.
 
 ## Installed applications
 
