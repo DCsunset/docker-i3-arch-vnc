@@ -3,7 +3,8 @@ ARG VERSION
 FROM archlinux:${VERSION:-latest}
 LABEL MAINTAINER="DCsunset"
 
-COPY ./scripts /
+# copy directory contents to /scripts
+COPY ./scripts /scripts
 
 WORKDIR /root
 
