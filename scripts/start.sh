@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 # Run init.sh if it exists
 [[ -f /scripts/init.sh ]] && /scripts/init.sh && rm /scripts/init.sh
 
