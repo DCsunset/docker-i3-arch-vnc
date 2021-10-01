@@ -17,4 +17,4 @@ fi
 vncsession root :0
 
 # Start noVNC
-/noVNC-${noVNC_version}/utils/launch.sh
+/noVNC/utils/launch.sh

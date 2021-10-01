@@ -18,6 +18,7 @@ wget https://github.com/novnc/websockify/archive/v${websockify_version}.tar.gz -
 	&& cd / && rm -r /websockify.tar.gz /websockify-${websockify_version} \
 	&& wget https://github.com/novnc/noVNC/archive/v${noVNC_version}.tar.gz -O /noVNC.tar.gz \
 	&& tar -xvf /noVNC.tar.gz -C / \
-	&& cd /noVNC-${noVNC_version} \
+	&& mv /noVNC-${noVNC_version} /noVNC
+	&& cd /noVNC \
 	&& ln -s vnc.html index.html \
 	&& rm /noVNC.tar.gz
