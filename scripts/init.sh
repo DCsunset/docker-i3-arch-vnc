@@ -2,8 +2,8 @@
 
 set -e
 
-noVNC_version=1.2.0
-websockify_version=0.10.0
+export noVNC_version=1.2.0
+export websockify_version=0.10.0
 
 # Install apps
 pacman -Syu --noconfirm xorg-server \
