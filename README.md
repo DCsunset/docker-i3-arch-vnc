@@ -1,6 +1,5 @@
 # docker-i3-arch-vnc
 
-[![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/dcsunset/i3-arch-vnc)](https://hub.docker.com/r/dcsunset/i3-arch-vnc)
 [![Docker Image Size](https://badgen.net/docker/size/dcsunset/i3-arch-vnc)](https://hub.docker.com/r/dcsunset/i3-arch-vnc)
 
 A minimum docker image of Arch Linux with i3wm and VNC support.
