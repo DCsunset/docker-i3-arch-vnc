@@ -16,7 +16,7 @@ docker pull dcsunset/i3-arch-vnc
 Simple usage:
 
 ```
-docker run -d --name i3-arch-vnc -p 5900:5900 -p 6080:6080 -e VNC_PASSWD=password dcsunset/i3-arch-vnc
+docker run -d --name i3-arch-vnc -p 5900:5900 -p 6080:6080 -e VNC_PASSWD=password -e USERNAME=arch dcsunset/i3-arch-vnc
 ```
 
 On the first startup, this image will install the i3 related packages.
@@ -30,6 +30,9 @@ and connect to localhost:5900.
 If `VNC_PASSWD` is not set,
 the security type of tigervnc should be set to None in `/root/.vnc/config`,
 it is **insecure** when exposing the container on the Internet.
+
+If `USERNAME` is not set,
+it will use root as the default user.
 
 
 ## Exposed ports
