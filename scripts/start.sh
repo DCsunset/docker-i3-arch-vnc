@@ -8,8 +8,8 @@ set -e
 # add user if specified
 if [ ! -z $USERNAME ]; then
 	pacman -S --noconfirm sudo
-	useradd $USERNAME
-	usermod -aG sudo $USERNAME
+	useradd -m -G wheel $USERNAME
+	sed -i "s/^# %wheel ALL=(ALL) ALL$/%wheel ALL=(ALL) ALL/g" /etc/sudoers
 fi
 
 umask 0077                # use safe default permissions
