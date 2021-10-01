@@ -7,7 +7,7 @@ set -e
 
 # add user if specified
 if [ ! -z $USERNAME ]; then
-	pacman -S sudo
+	pacman -S --noconfirm sudo
 	useradd $USERNAME
 	usermod -aG sudo $USERNAME
 fi
