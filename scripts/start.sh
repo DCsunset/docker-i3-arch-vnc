@@ -7,9 +7,9 @@ set -e
 
 # add user if specified
 if [ ! -z $USERNAME ]; then
+	pacman -S sudo
 	useradd $USERNAME
 	usermod -aG sudo $USERNAME
-	pacman -S sudo
 fi
 
 umask 0077                # use safe default permissions
