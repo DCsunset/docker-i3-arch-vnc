@@ -8,9 +8,10 @@ set -e
 # current user
 CUSER=${USERNAME:-root}
 # add user if specified
-if [ ! -z $USERNAME ] ; then
+if [ ! -z $USERNAME ]; then
 	HOMEDIR="/home/$USERNAME"
-	if [ ! -d "$HOMEDIR" ]; then
+	# Check if user exists
+	if ! id "$USERNAME" &> /dev/null; then
 		pacman -S --noconfirm sudo
 		useradd -m -G wheel $USERNAME
 		sed -i "s/^# %wheel ALL=(ALL) ALL$/%wheel ALL=(ALL) ALL/g" /etc/sudoers
