@@ -33,7 +33,7 @@ if [ ! -z $VNC_PASSWD ]; then
 	vncpasswd -f <<< "$VNC_PASSWD" > "$HOMEDIR/.vnc/passwd"
 fi
 
-chown -R $CUSER "$HOMEDIR/.vnc"
+chown -R $CUSER:$CUSER "$HOMEDIR"
 
 vncsession $CUSER :0
 

@@ -33,6 +33,8 @@ it is **insecure** when exposing the container on the Internet.
 
 If `USERNAME` is not set,
 it will use root as the default user.
+No password is set by default for the user.
+You should change it after first login.
 
 
 ## Exposed ports
