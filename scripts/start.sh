@@ -14,6 +14,8 @@ if [ ! -z $USERNAME ]; then
 	if ! id "$USERNAME" &> /dev/null; then
 		pacman -S --noconfirm sudo
 		useradd -m -G wheel $USERNAME
+		# delete password
+		passwd -d $USERNAME
 		sed -i "s/^# %wheel ALL=(ALL) ALL$/%wheel ALL=(ALL) ALL/g" /etc/sudoers
 	fi
 else
