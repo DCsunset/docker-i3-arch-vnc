@@ -34,6 +34,7 @@ if [ ! -z $VNC_PASSWD ]; then
 fi
 
 chown -R $CUSER:$CUSER "$HOMEDIR"
+rm -f /tmp/.X0-lock
 
 vncsession $CUSER :0
 
