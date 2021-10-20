@@ -1,6 +1,10 @@
 name: Build and Publish Docker Image
 
-on: [push, workflow_dispatch]
+on:
+  push:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 0 1 * *"
 
 jobs:
   push_to_registry:
