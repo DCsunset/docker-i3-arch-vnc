@@ -38,12 +38,11 @@ You should change it after first login.
 
 By default, noVNC will be installed and run.
 Set `DISABLE_NOVNC` to `true` to diable it.
-Then port `6080` won't be used anymore.
 
 ## Exposed ports
 
 * 5900: Used for VNC interface
-* 6080: Used for noVNC Web UI
+* 6080: Used for noVNC Web UI (if noVNC is enabled)
 
 ## Customization
 
@@ -56,7 +55,7 @@ Besides, `init.sh` and `start.sh` can be customized as well.
 ## Installed applications
 
 * tigervnc
-* noVNC
+* noVNC (if noVNC is enabled)
 * wget
 * alacritty (a terminal emulator)
 
