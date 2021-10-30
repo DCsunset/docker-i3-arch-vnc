@@ -36,6 +36,9 @@ it will use root as the default user.
 No password is set by default for the user.
 You should change it after first login.
 
+By default, noVNC will be installed and run.
+Set `DISABLE_NOVNC` to `true` to diable it.
+Then port `6080` won't be used anymore.
 
 ## Exposed ports
 
