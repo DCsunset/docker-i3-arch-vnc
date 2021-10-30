@@ -2,9 +2,6 @@
 
 set -e
 
-export noVNC_version=1.2.0
-export websockify_version=0.10.0
-
 # Install apps
 pacman -Syu --noconfirm xorg-server \
 	wget tigervnc alacritty which \
@@ -12,6 +9,9 @@ pacman -Syu --noconfirm xorg-server \
 
 # Install noVNC
 if [ "$DISABLE_NOVNC" != "true" ]; then
+	export noVNC_version=1.2.0
+	export websockify_version=0.10.0
+
 	wget https://github.com/novnc/websockify/archive/v${websockify_version}.tar.gz -O /websockify.tar.gz \
 		&& tar -xvf /websockify.tar.gz -C / \
 		&& cd /websockify-${websockify_version} \
