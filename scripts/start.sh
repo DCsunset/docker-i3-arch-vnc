@@ -37,9 +37,13 @@ chown -R $CUSER:$CUSER "$HOMEDIR"
 # Remove lock since stopping containers won't remove it
 rm -f /tmp/.X0-lock
 
+echo Starting vncsession...
 vncsession $CUSER :0
 
 # Start noVNC
 if [ "$DISABLE_NOVNC" != "true" ]; then
 	/noVNC/utils/launch.sh
+else
+	# prevent process from exiting
+	tail -f /dev/null
 fi
