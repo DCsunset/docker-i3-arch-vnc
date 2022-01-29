@@ -29,7 +29,7 @@ and connect to localhost:5900.
 
 If `VNC_PASSWD` is not set,
 the security type of tigervnc should be set to None in `/root/.vnc/config`,
-it is **insecure** when exposing the container on the Internet.
+it is **insecure** when exposing the container directly to the Internet.
 
 If `USERNAME` is not set,
 it will use root as the default user.
@@ -37,7 +37,7 @@ No password is set by default for the user.
 You should change it after first login.
 
 By default, noVNC will be installed and run.
-Set `DISABLE_NOVNC` to `true` to diable it.
+Set `DISABLE_NOVNC` to `true` to disable it.
 
 ## Exposed ports
 
