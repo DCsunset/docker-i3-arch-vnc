@@ -16,7 +16,7 @@ if [ ! -z $USERNAME ]; then
 		useradd -m -G wheel $USERNAME
 		# delete password
 		passwd -d $USERNAME
-		sed -i "s/^# %wheel ALL=(ALL) ALL$/%wheel ALL=(ALL) ALL/g" /etc/sudoers
+		echo "%wheel ALL=(ALL:ALL) ALL" >> /etc/sudoers
 	fi
 else
 	HOMEDIR="/root"
