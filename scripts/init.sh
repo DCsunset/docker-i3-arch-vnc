@@ -3,9 +3,18 @@
 set -e
 
 # Install apps
-pacman -Syu --noconfirm xorg-server \
-	wget tigervnc alacritty which \
-	i3-wm python-setuptools ttf-dejavu
+pacman -Sy --noconfirm --needed xorg-server \
+	wget tigervnc which \
+	python-setuptools ttf-dejavu
+
+# Install Terminal
+pacman -S --noconfirm --needed terminator alacritty
+
+# Install DE
+#LXQT
+#pacman -S --noconfirm --needed lxqt breeze-icons oxygen-icons
+#LXDE
+pacman -S --noconfirm --needed lxde
 
 # Install noVNC
 if [ "$DISABLE_NOVNC" != "true" ]; then
