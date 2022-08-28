@@ -12,7 +12,6 @@ if [ ! -z $USERNAME ]; then
 	HOMEDIR="/home/$USERNAME"
 	# Check if user exists
 	if ! id "$USERNAME" &> /dev/null; then
-		pacman -S --noconfirm sudo
 		useradd -m -G wheel $USERNAME
 		# delete password
 		passwd -d $USERNAME
