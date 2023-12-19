@@ -3,9 +3,9 @@
 set -e
 
 # Install apps
-pacman -Syu --noconfirm xorg-server \
-	wget tigervnc alacritty which \
-	i3-wm python-setuptools ttf-dejavu
+pacman -Syu --noconfirm archlinux-keyring \
+	xorg-server wget tigervnc alacritty \
+	which i3-wm python-setuptools ttf-dejavu
 
 # Install noVNC
 if [ "$DISABLE_NOVNC" != "true" ]; then
